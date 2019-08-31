@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+   	
+          <meta name="description" content="Use a free Google Firebase Database to allow visitors to leave comments on your web pages. From https://AlanSimpson.me/firebase">      
+    <meta name="author" content="Alan Simpson">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+<!--===============================================================================================-->
+	<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/animsition/css/animsition.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="vendor/daterangepicker/daterangepicker.css">
+<!--===============================================================================================-->
+	<link rel="stylesheet" type="text/css" href="css/util.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+<!--===============================================================================================-->
+
+    <style>
+     /* Just come optional fonts and characters for styling */
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans|Open+Sans|Pacifico|Source+Code+Pro');
+        /* FontAwesome cdn fonts */
+        @import url('https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+        body {
+            font-family: 'Open Sans', sans-serif;
+        }
+        
+        ul#pastcomments li {
+            margin: 0 0 2em 0;
+            padding: 10px;
+        }
+
+       </style>
+</head>
+
+<body>
+TalentSprint brings transformational learning programs to young and experienced professionals. Our digital platform offers a hybrid onsite and online experience to seekers of deep tech expertise. We partner with top academic institutions and global corporations to create and deliver world-class programs, certifications, and outcomes. We aim to reach and enable 1 million professionals by 2020.<br><br><br>
+
+<b>Hybrid Learning</b><br><br>
+
+Our Platform Gives You the Best of Both Worlds
+The TalentSprint Hybrid Learning Platform values your time and aspirations. Hi-tech with hi-touch platform helps you build your expertise 24x7. Whether you are a working professional or just out of college, you will get the perfect blend of top-end academics and the right practical orientation with our pracademic platform.<br><br>
+
+Praesent porta purus non lacus vulputate mattis. Curabitur mollis pellentesque erat, sit amet ultricies elit volutpat ut. Nullam semper arcu non eros commodo pellentesque. Suspendisse iaculis elit quis libero eleifend, et efficitur nibh sollicitudin. Donec vel augue vel dui vulputate aliquam vel quis justo. Sed eget ultrices enim. Fusce nec tellus vitae metus efficitur pulvinar id sed eros. Nulla at nisi id est accumsan elementum. Nunc aliquet hendrerit diam, eu ultrices risus interdum nec. Cras tempor magna eu libero posuere commodo. Aliquam blandit placerat mattis. Duis quis vestibulum lorem, ac consequat erat. Morbi commodo lacus nibh, ac ornare dolor varius et. Suspendisse potenti. Praesent placerat urna quis lorem imperdiet volutpat.<br><br>
+
+Vestibulum cursus, libero id bibendum laoreet, orci tellus blandit arcu, non condimentum nisi tortor nec arcu. Nam vitae ante a sapien ullamcorper luctus. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Nulla facilisi. Integer quis nulla vitae risus bibendum pharetra. Vestibulum sed magna vel ex semper elementum vel sit amet felis. Cras ac mi sollicitudin, eleifend enim eu, iaculis orci. Nulla facilisi. Curabitur faucibus convallis sapien tempor fringilla. Phasellus ut ultricies lacus, eget facilisis metus.<br><br>
+
+Maecenas aliquet venenatis tortor et consequat. Proin mollis justo massa, id ultricies diam venenatis at. Phasellus porttitor elit eget ex fringilla commodo. Vivamus fringilla quam sed leo vulputate, sit amet dignissim nunc placerat. Praesent lacinia, ante a consequat consectetur, quam metus elementum elit, et vehicula eros nulla nec justo. Proin aliquam sodales est, in lacinia felis condimentum sit amet. Duis feugiat ornare urna, non cursus lacus egestas at. Nullam vitae libero justo. Nunc orci magna, finibus ut dignissim sit amet, laoreet in mi. Sed cursus ipsum tempor odio posuere hendrerit. Sed id semper leo. Aliquam velit nulla, semper nec nunc at, maximus efficitur purus. Aenean a purus venenatis, dignissim erat non, venenatis enim. Phasellus finibus sollicitudin urna placerat commodo. Aliquam placerat lectus quis congue suscipit. Nulla quis bibendum eros.<br><br>
+
+Fusce efficitur malesuada dapibus. Maecenas massa sapien, porta eget convallis quis, sodales in elit. Pellentesque urna ante, finibus in mauris quis, porta maximus sem. Aliquam id mauris non sapien vestibulum cursus. Proin mattis vestibulum ultrices. Phasellus ultricies ipsum id mauris pellentesque, sit amet eleifend elit venenatis. Nam sed lacus maximus, laoreet arcu non, accumsan eros. Cras et dui nunc. Sed eu ipsum faucibus, scelerisque tortor at, congue elit. Morbi fermentum sollicitudin erat, vitae tempus ante volutpat eget. Praesent pretium viverra ligula, mattis bibendum diam viverra et. Donec congue purus lectus, eu dignissim magna vestibulum nec. Etiam at molestie lorem. Praesent sodales, neque in accumsan sodales, augue ipsum dignissim sem, hendrerit euismod dolor tortor vitae lacus.<br><br>
+
+Cras consectetur, velit eget varius egestas, dui nunc luctus velit, in pretium turpis quam sit amet magna. Ut placerat nulla magna, nec consectetur ex sodales bibendum. Etiam lacinia ligula nec interdum tempus. Aenean eget tristique nisi. Vestibulum magna erat, pulvinar ac tellus molestie, cursus malesuada sapien. Nam porta, tellus non tempus faucibus, elit urna iaculis nisl, ac pulvinar erat urna at odio. Phasellus dui lorem, sodales in egestas a, fermentum a nisi. Maecenas pellentesque dui turpis. Ut congue porttitor metus, nec rhoncus sem scelerisque quis.<br><br>
+
+
+<div class="container-contact100" id="allcomments">
+
+		<div class="wrap-contact100">
+                        <ul id="pastcomments"></ul>
+			<form class="contact100-form validate-form" id = "newcomment">
+				<span class="contact100-form-title">
+					 Comments Box
+				</span>
+
+				<div class="wrap-input100 validate-input" data-validate="Please enter your name">
+                                        <input class="input100" id="tbName" type="text" maxlength="20" placeholder="Full Name" required>
+					<span class="focus-input100"></span>
+				</div>
+
+				
+				<div class="wrap-input100 validate-input" data-validate = "Please enter your comment">
+                                  <textarea  class="input100" id="txComment" maxlength="4096" required style="width:96%" placeholder="Please enter your comment"></textarea>
+					
+					<span class="focus-input100"></span>
+				</div>
+
+				
+					<button class="contact100-form-btn" id="btnSubmitComment" value="Submit">
+						<span>
+							<i class="fa fa-paper-plane-o m-r-6" aria-hidden="true"></i>
+							 submit
+						</span>
+					</button>
+			
+			</form>
+		</div>
+	</div>
+
+    <!-- Connection to Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/6.4.0/firebase-database.js"></script>
+    <script>
+    // Your web app's Firebase configuration
+     var firebaseConfig = {
+       apiKey: "AIzaSyAP54I0zA3Z9LccG8A40SavPGWKSWqQIX4",
+       authDomain: "comments-box.firebaseapp.com",
+       databaseURL: "https://comments-box.firebaseio.com",
+       projectId: "comments-box",
+       storageBucket: "",
+       messagingSenderId: "704881653750",
+       appId: "1:704881653750:web:91c534874fcbb716"
+     };
+        // Initialize Firebase
+        firebase.initializeApp(firebaseConfig);
+
+        //Rootref is the whole database.
+        const rootRef = firebase.database().ref();
+        //commentsRef is just the pageCountsNode
+        const commentsRef = rootRef.child('comments');
+        //Listen for click on Submit Comment button, and post comment.
+        document.getElementById("btnSubmitComment").addEventListener("click", function () {
+            //Replace line breaks in comment with br tags.
+            var newcomment = document.getElementById('txComment').value.replace(/\n/g, "<br>");
+            //Define a new, keyed post.
+            var newPostRef = commentsRef.push();
+            //Fill tne new keyed post with data
+            newPostRef.set({
+                name: document.getElementById('tbName').value.trim(),
+                comment: newcomment.trim(),
+                frompage: location.pathname,
+                when: firebase.database.ServerValue.TIMESTAMP
+            });
+        });
+
+        function showpastcomments() {
+            var showat = document.getElementById('pastcomments');
+            //Get comments whose from page equals this page's pathname.
+            var commentsRef = firebase.database().ref('comments/');
+            commentsRef.once('value', function (snapshot) {
+                snapshot.forEach(function (itemSnapshot) {
+                    //Get the object for one snapshot
+                    var itemData = itemSnapshot.val();
+                    //console.log(Object.keys(itemData))
+                    //console.log(k);
+                    var comment = itemData.comment;
+                    var name = itemData.name;
+                    var k = itemSnapshot.key;
+                    var kd = itemSnapshot.val();
+                    console.log(kd)
+                    //var key = Object.keys(itemSnapshot.val())[2];
+                    console.log(k)
+                    var remove = ' <input type="button"  value="Delete From database" id = "' +k+'" class="delButton" onclick="removeData_1(this)" />';
+                    var when = new Date(itemData.when).toLocaleDateString("en-us");
+                    showat.innerHTML += "<li>" + comment + "<span> -- " + name +"</span>--<span> "+remove+" (" + when +
+                        ")</span></li>";
+                })
+            })
+        }
+        //Called when page first opens and also after Submit button click to show all comments for this page.
+        showpastcomments()
+
+
+
+    </script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.js"></script>
+<script>
+//
+//$(".delButton").on("click", function(){
+	
+  //let keyvalue =$(this).closest("li").find("span.key").text();
+  //let ref = firebase.database().ref('comments/'+ keyvalue);
+  
+   //ref.child(key).remove();
+   //ref.set({})
+//});
+
+
+
+
+  
+  
+</script>
+
+<script>
+function removeData_1(params){
+   const fb = firebase.database().ref()
+   // key = document.getElementById('key').value;
+    fb.child('comments/'+ params.id +'/').remove()
+    alert('The comment is deleted successfully!');
+    reload_page();
+    
+   
+}
+function reload_page(){
+   window.location.reload();
+  }
+  
+
+
+
+
+</script>
+</body>
+</html>
